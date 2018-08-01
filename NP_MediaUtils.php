@@ -51,7 +51,8 @@ class NP_MediaUtils extends NucleusPlugin
 			}
 		}
 		
-		$result = sql_query('SELECT bnumber, bshortname FROM ' . sql_table('blog') . ';');
+		$result = sql_query('SELECT bnumber, bshortname FROM ' . sql_table('blog'));
+
 		while ( FALSE !== ($row = sql_fetch_assoc($result)) )
 		{
 			$blogs[$row['bnumber']] = $row['bshortname'];
